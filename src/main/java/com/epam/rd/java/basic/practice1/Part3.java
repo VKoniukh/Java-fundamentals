@@ -6,7 +6,7 @@ public class Part3 {
 
         for (int i = 0; i < args.length; i++){
             System.out.print(args[i]);
-            for (int i = 0; i < args.length - 1; i++){
+            for (int n = 0; n < args.length - 1; i++){
                 System.out.print(" ");
             }
         }
