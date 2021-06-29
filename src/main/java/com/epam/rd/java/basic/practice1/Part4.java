@@ -2,23 +2,33 @@ package com.epam.rd.java.basic.practice1;
 
 public class Part4 {
 
-    public static void main(String[] args1, args2) {
-        int a = args1
-        int b = args2
-        public int egcd(int a, int b) {
-            if (a == 0)
-                return b;
+    public static void main(String[] args) {
 
-            while (b != 0) {
-                if (a > b)
-                    a = a - b;
-                else
-                    b = b - a;
-            }
-
-            return a;
+        if (args.length != 2) {
+            System.out.println("2 args, pls");
         }
 
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+
+        int n = egcd(a, b);
+
+        System.out.print(n);
+
+    }
+
+    public static int egcd(int a, int b) {
+        if (a == 0)
+            return b;
+
+        while (b != 0) {
+            if (a > b)
+                a = a - b;
+            else
+                b = b - a;
+        }
+
+        return a;
     }
 
 }
