@@ -6,8 +6,10 @@ public class Part6 {
         int a = Integer.parseInt(args[0]);
         int[] array = new int[a];
         int[] result = arr1(array);
-        for (int j : result) {
-            System.out.print(j);
+        for (int i = 0; i < result.length; i++) {
+                System.out.print(result[i] + " ");
+                if (i == result.length -1)
+                System.out.print(result[i]);
         }
     }
 
