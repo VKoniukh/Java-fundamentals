@@ -31,6 +31,9 @@ public class Part6 {
                 counter++;
             }
         }
-        return counter == (a - 2);
+        if (counter == (a - 2)) {
+            return  true;
+        }
+        return  false;
     }
 }
