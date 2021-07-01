@@ -33,9 +33,6 @@ public class Part6 {
                 counter++;
             }
         }
-        if (counter == (a - 2)) {
-            return  true;
-        }
-        return  false;
+        return counter == (a - 2);
     }
 }
