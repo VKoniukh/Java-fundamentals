@@ -1,39 +1,47 @@
 package com.epam.rd.java.basic.practice1;
 
 public class Part6 {
-    private static int index = 1;
 
     public static void main(String[] args) {
-        if (args.length != 1)
-            return;
-        int length = Integer.parseInt(args[0]);
-        if (length < 1)
-            return;
-        int[] num = new int [length];
-        defPrimeNum(2, num);
-
-        for (int index = 0; index < num.length; index++) {
-            if (index == num.length - 1)
-                System.out.print(num[index]);
-            else
-                System.out.print(num[index] + " ");
+        int a = Integer.parseInt(args[0]);
+        int[] array = arr(a);
+        int[] result = arr1(array);
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
         }
     }
 
-    public static void defPrimeNum (int number, int [] num) {
-        if (index == num.length)
-            return;
+    public static int[] arr(int size) {
+        int[] array = new int[size];
+        return array;
+    }
 
-        int divisors = 0;
-                for (int nums = number; nums > 1; nums--) {
-                    if (number % nums == 0)
-                        divisors ++;
-                    if (divisors == 2)
-                        defPrimeNum(++number, num);
+    public static int[] arr1(int[] array) {
+        start: for (int i = 0, b = 2; i < array.length; i++, b++) {
+            for (int j = b; j < Integer.MAX_VALUE; j++) {
+                if (isPrime(j)) {
+                    array[i] = j;
+                    continue start;
+                } else {
+                    i--;
+                    continue start;
                 }
-                if (index != num.length) {
-                    num[index++] = number;
-                    defPrimeNum(++number, num);
-                }
+            }
+        }
+        return array;
+    }
+
+    public static boolean isPrime(int a) {
+        int counter = 0;
+        for (int i = 2; i < a; i++) {
+            if (a % i != 0) {
+                counter++;
+                continue;
+            }
+        }
+        if (counter == (a - 2)) {
+            return  true;
+        }
+        return  false;
     }
 }
