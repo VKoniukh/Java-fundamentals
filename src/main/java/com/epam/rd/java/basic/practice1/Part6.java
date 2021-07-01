@@ -4,27 +4,20 @@ public class Part6 {
 
     public static void main(String[] args) {
         int a = Integer.parseInt(args[0]);
-        int[] array = arr(a);
+        int[] array = new int[a];
         int[] result = arr1(array);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + " ");
+        for (int j : result) {
+            System.out.print(j);
         }
     }
 
-    public static int[] arr(int size) {
-        int[] array = new int[size];
-        return array;
-    }
-
     public static int[] arr1(int[] array) {
-        start: for (int i = 0, b = 2; i < array.length; i++, b++) {
+         for (int i = 0, b = 2; i < array.length; i++, b++) {
             for (int j = b; j < Integer.MAX_VALUE; j++) {
                 if (isPrime(j)) {
                     array[i] = j;
-                    continue start;
                 } else {
                     i--;
-                    continue start;
                 }
             }
         }
@@ -36,12 +29,8 @@ public class Part6 {
         for (int i = 2; i < a; i++) {
             if (a % i != 0) {
                 counter++;
-                continue;
             }
         }
-        if (counter == (a - 2)) {
-            return  true;
-        }
-        return  false;
+        return counter == (a - 2);
     }
 }
