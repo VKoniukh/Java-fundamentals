@@ -1,7 +1,7 @@
 package com.epam.rd.java.basic.practice1;
 
 public class Part6 {
-    private static int index = 0;
+    private static int index = 1;
 
     public static void main(String[] args) {
         if (args.length != 1)
