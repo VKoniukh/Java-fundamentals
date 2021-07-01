@@ -7,7 +7,7 @@ public class Part6 {
         if (args.length != 1)
             return;
         int length = Integer.parseInt(args[0]);
-        if (length < 1 )
+        if (length < 1)
             return;
         int[] num = new int [length];
         defPrimeNum(2, num);
