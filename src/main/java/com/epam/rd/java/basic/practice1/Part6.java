@@ -7,19 +7,20 @@ public class Part6 {
         int[] array = new int[a];
         int[] result = arr1(array);
         for (int i = 0; i < result.length; i++) {
-                System.out.print(result[i] + " ");
-                if (i == result.length -1)
-                System.out.print(result[i]);
+            if (i == result.length - 1)
+            System.out.print(result[i]);
+            else
+            System.out.print(result[i] + " ");
         }
     }
 
     public static int[] arr1(int[] array) {
-         for (int i = 0, b = 2; i < array.length; i++, b++) {
-             for (int j = b; j < Integer.MAX_VALUE; j++) {
+        for (int i = 0, b = 2; i < array.length; i++, b++) {
+            for (int j = b; j < Integer.MAX_VALUE; j++) {
                 if (isPrime(j)) {
                     array[i] = j;
                     break;
-                } else if (i > 0){
+                } else if (i > 0) {
                     i--;
                     break;
                 }
