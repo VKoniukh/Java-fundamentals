@@ -13,11 +13,13 @@ public class Part6 {
 
     public static int[] arr1(int[] array) {
          for (int i = 0, b = 2; i < array.length; i++, b++) {
-            for (int j = b; j < Integer.MAX_VALUE; j++) {
+             for (int j = b; j < Integer.MAX_VALUE; j++) {
                 if (isPrime(j)) {
                     array[i] = j;
-                } else {
+                    break;
+                } else if (i > 0){
                     i--;
+                    break;
                 }
             }
         }
