@@ -11,6 +11,7 @@ public class Part7 {
         System.out.println("BA" + ARROW + str2int("BA") + ARROW + int2str(str2int("BA")));
         System.out.println("ZZ" + ARROW + str2int("ZZ") + ARROW + int2str(str2int("ZZ")));
         System.out.println("AAA" + ARROW + str2int("AAA") + ARROW + int2str(str2int("AAA")));
+        System.out.println(rightColumn(args[0]));
     }
 
     public static int str2int(String number) {
