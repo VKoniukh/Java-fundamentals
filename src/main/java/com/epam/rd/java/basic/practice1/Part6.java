@@ -7,10 +7,12 @@ public class Part6 {
         int[] array = new int[a];
         int[] result = arr1(array);
         for (int i = 0; i < result.length; i++) {
-            if (i == result.length - 1)
-            System.out.print(result[i]);
-            else
-            System.out.print(result[i] + " ");
+            if (i == result.length - 1) {
+                System.out.print(result[i]);
+            }
+            else {
+                System.out.print(result[i] + " ");
+            }
         }
     }
 
