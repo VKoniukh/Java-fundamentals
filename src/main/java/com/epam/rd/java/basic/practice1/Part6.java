@@ -9,8 +9,7 @@ public class Part6 {
         for (int i = 0; i < result.length; i++) {
             if (i == result.length - 1) {
                 System.out.print(result[i]);
-            }
-            else {
+            } else {
                 System.out.print(result[i] + " ");
             }
         }

@@ -2,6 +2,7 @@ package com.epam.rd.java.basic.practice1;
 
 public class Part7 {
     static final String ARROW = " ==> ";
+
     public static void main(String[] args) {
         System.out.println("A" + ARROW + str2int("A") + ARROW + int2str(str2int("A")));
         System.out.println("B" + ARROW + str2int("B") + ARROW + int2str(str2int("B")));
@@ -16,13 +17,13 @@ public class Part7 {
     public static int str2int(String number) {
         int res = 0;
         for (int i = 0, j = number.length() - 1; i < number.length(); i++, j--) {
-            res += (number.charAt(j)-64)*Math.pow(26, i);
+            res += (number.charAt(j) - 64) * Math.pow(26, i);
         }
         return res;
     }
 
     public static String int2str(int number) {
-    StringBuilder str = new StringBuilder();
+        StringBuilder str = new StringBuilder();
         while (number > 0) {
             int rem = number % 26;
             if (rem == 0) {
